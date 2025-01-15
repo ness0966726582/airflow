@@ -39,7 +39,7 @@
   > docker exec -it --user airflow airflow-airflow-worker-1 bash<br>
   > exit<br>
   4-2爬蟲需要有瀏覽器
-  > python -m pip install wget unzip libnss3 libx11-xcb1 libxcomposite1 libxcursor1 libxdamage1 libxrandr2 libgbm1 libasound2 libatk1.0-0 libatk-bridge2.0-0 libcups2
+  > python -m pip install google-chrome-stable
   > 完成後記得要重啟
 
   5.重啟容器
