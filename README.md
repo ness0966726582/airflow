@@ -13,7 +13,7 @@
   
 - 進入容器使用Airflow最高權限安裝程式必要的API
   1.查看容器狀態 docker ps<br>
-  > ![image](https://github.com/user-attachments/assets/db9cc888-0655-4629-a658-0d65dc7722ec)
+  > ![image](https://github.com/user-attachments/assets/db9cc888-0655-4629-a658-0d65dc7722ec)<br>
   > docker exec -it --user airflow airflow-airflow-webserver-1 bash<br>
   > docker exec -it --user airflow airflow-airflow-triggerer-1 bash<br>
   > docker exec -it --user airflow airflow-airflow-scheduler-1 bash<br>
