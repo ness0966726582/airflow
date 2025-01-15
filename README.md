@@ -1,5 +1,5 @@
 # airflow
-- XSHELL操作
+- XSHELL操作<br>
   1.登入Airflow主機10.231.220.68(sakura/sakura#123)<br>
   2.最高權限 sudo su<br>
   3.密碼:sakura#123<br>
