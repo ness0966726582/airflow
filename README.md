@@ -39,9 +39,12 @@
 > wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb<br>
 > apt-get update && apt-get install -y ./google-chrome-stable_current_amd64.deb<br>
 > google-chrome --version<br>
-  - 容器外執行
+  - 容器外執行(下載+安裝)
   > ![image](https://github.com/user-attachments/assets/b91b400c-371d-4335-a38f-453b3eb4b8bb)
-  
+  > ![image](https://github.com/user-attachments/assets/ec3b1281-3a57-462b-be9d-e2e6f85ee515)
+  - 完成畫面
+  > ![image](https://github.com/user-attachments/assets/5ad336ef-21a4-4442-89c1-7b3eb6a01b1b)
+
   4.先跳出容器...再回到1把全部容器安裝必要API
   > exit<br>
   > docker exec -it --user airflow airflow-airflow-triggerer-1 bash<br>
