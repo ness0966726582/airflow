@@ -33,7 +33,15 @@
   
   > python -m pip install chromedriver-autoinstaller
   > ![image](https://github.com/user-attachments/assets/683ad141-5c71-4545-829a-27f97b5990c0)
-
+  
+# 解決安裝Google Chrome
+  ![image](https://github.com/user-attachments/assets/f039da53-bca6-4323-8bbe-e6434d643ea4)
+> wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb<br>
+> apt-get update && apt-get install -y ./google-chrome-stable_current_amd64.deb<br>
+> google-chrome --version<br>
+  - 容器外執行
+  > ![image](https://github.com/user-attachments/assets/b91b400c-371d-4335-a38f-453b3eb4b8bb)
+  
   4.先跳出容器...再回到1把全部容器安裝必要API
   > exit<br>
   > docker exec -it --user airflow airflow-airflow-triggerer-1 bash<br>
