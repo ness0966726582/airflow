@@ -30,6 +30,9 @@
   3.被要求最高權限可以用這個方式略過python -m pip install + 要安裝的API
   > python -m pip install selenium psycopg2-binary python-dotenv<br>
   > ![image](https://github.com/user-attachments/assets/0dd1b676-d2bf-4132-81f5-24b93134f139)
+  
+  > python -m pip install chromedriver-autoinstaller
+  > ![image](https://github.com/user-attachments/assets/683ad141-5c71-4545-829a-27f97b5990c0)
 
   4.先跳出容器...再回到1把全部容器安裝必要API
   > exit<br>
