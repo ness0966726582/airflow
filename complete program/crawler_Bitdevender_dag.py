@@ -28,8 +28,8 @@ def crawl_bitdefender():
     # Selenium configuration
     config = {
         "url": "https://10.231.255.34/",
-        "username": "2019051401@ad.dc",
-        "password": "Zz800619",
+        "username": "YOUR ACCOUNT",
+        "password": "YOUR PASSWORD",
         "elements": {
             "username_input": "textfield-1031-inputEl",
             "password_input": "textfield-1032-inputEl",
