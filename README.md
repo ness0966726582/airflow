@@ -20,6 +20,7 @@
   # <進入容器>------>docker exec -it --user root <container-id> /bin/bash
   > docker exec -it --user root airflow-airflow-webserver-1 bash<br>
   > cd /opt/airflow/dags//crawler_bitdefender/<br>
+  
   > apt-get update && apt-get install -y \
     wget \
     unzip \
