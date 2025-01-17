@@ -24,14 +24,17 @@ docker exec -it --user root airflow-airflow-worker-1 bash
 cd /opt/airflow/dags/crawler_bitdefender
 
 # 3.權限這個方式略過python -m pip install + 要安裝套件
-  > python -m pip install selenium psycopg2-binary python-dotenv<br>
+  > pip install --no-cache-dir \
+    selenium \
+    psycopg2-binary \
+    python-dotenv
 
 # 4.爬蟲必要安裝(選用版本號: 114.0.5735.90)
 [來源google-chrome](https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/)
 [來源chromedriver](https://chromedriver.storage.googleapis.com/)
 作法:個別進入容器內下
 > 安裝套件
-    apt-get update && apt-get install -y \
+    apt-get update && apt-get install -y \ 
     wget \
     unzip \
     fonts-liberation \
