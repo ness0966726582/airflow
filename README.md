@@ -37,21 +37,8 @@ cd /opt/airflow/dags/crawler_bitdefender
 [來源chromedriver](https://chromedriver.storage.googleapis.com/)
 作法:個別進入容器內下
 > 安裝套件
-    apt-get update && apt-get install -y \     wget \
-    unzip \
-    fonts-liberation \
-    libvulkan1 \
-    libxrandr2 \
-    libatk1.0-0 \
-    libxdamage1 \
-    libxcomposite1 \
-    libasound2 \
-    libgtk-3-0 \
-    libpangocairo-1.0-0 \
-    libnss3 \
-    libx11-xcb1 \
-    xdg-utils && \
-    apt-get clean
+    apt-get update && apt-get install -y \     wget \    unzip \    fonts-liberation \    libvulkan1 \    libxrandr2 \    libatk1.0-0 \    libxdamage1 \    libxcomposite1 \    libasound2 \    libgtk-3-0 \
+    libpangocairo-1.0-0 \    libnss3 \    libx11-xcb1 \    xdg-utils && \    apt-get clean
 
 > 安裝google-chrome<br>
 wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable//google-chrome-stable_114.0.5735.90-1_amd64.deb && \
