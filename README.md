@@ -27,7 +27,7 @@ cd /opt/airflow/dags/crawler_bitdefender
   > pip3 install selenium<br>
     pip3 install psycopg2-binary<br>
     pip3 install python-dotenv<br>
-
+  檢查 selenium --version && psycopg2-binary --version && python-dotenv --version<br>
 # 4.爬蟲必要安裝(選用版本號: 114.0.5735.90)
 [來源google-chrome](https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/)
 [來源chromedriver](https://chromedriver.storage.googleapis.com/)
