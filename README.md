@@ -23,7 +23,7 @@ docker exec -it --user root airflow-airflow-worker-1 bash
 # 2.專案存放路徑
 cd /opt/airflow/dags/crawler_bitdefender
 
-# 3.被要求最高權限可以用這個方式略過python -m pip install + 要安裝的API
+# 3.權限這個方式略過python -m pip install + 要安裝套件
   > python -m pip install selenium psycopg2-binary python-dotenv<br>
 
 # 4.爬蟲必要安裝(選用版本號: 114.0.5735.90)
