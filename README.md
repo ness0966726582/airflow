@@ -53,6 +53,9 @@
   ![image](https://github.com/user-attachments/assets/fc7b34d6-111a-41ce-a2f4-c9175aa6fe33)
   
   > docker exec -it --user root airflow-airflow-triggerer-1 bash
+  > 同上作法
+  > ![image](https://github.com/user-attachments/assets/9c1e4d09-88b7-4cdc-b640-c178bd4438d6)
+
   > docker exec -it --user root airflow-airflow-scheduler-1 bash
   > docker exec -it --user root airflow-airflow-worker-1 bash
 
