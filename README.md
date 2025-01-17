@@ -20,12 +20,37 @@
   # <進入容器>------>docker exec -it --user root <container-id> /bin/bash
   > docker exec -it --user root airflow-airflow-webserver-1 bash<br>
   > cd /opt/airflow/dags//crawler_bitdefender/<br>
-  > python3 install_chrome.py<br>
+  > apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    fonts-liberation \
+    libvulkan1 \
+    libxrandr2 \
+    libatk1.0-0 \
+    libxdamage1 \
+    libxcomposite1 \
+    libasound2 \
+    libgtk-3-0 \
+    libpangocairo-1.0-0 \
+    libnss3 \
+    libx11-xcb1 \
+    xdg-utils && \
+    apt-get clean
+  
+  > wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable//google-chrome-stable_114.0.5735.90-1_amd64.deb && \
+    dpkg -i google-chrome-stable_114.0.5735.90-1_amd64.deb || apt-get -f install -y
+  
+  > wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip && \
+    unzip chromedriver_linux64.zip && \
+    mv chromedriver /usr/local/bin/ && \
+    chmod +x /usr/local/bin/chromedriver 
+
   > 確認完成安裝版本<br>
   > google-chrome --version<br>
   > chromedriver --version<br>
   > 離開容器 exit
-
+  ![image](https://github.com/user-attachments/assets/fc7b34d6-111a-41ce-a2f4-c9175aa6fe33)
+  
   > docker exec -it --user root airflow-airflow-triggerer-1 bash
   > docker exec -it --user root airflow-airflow-scheduler-1 bash
   > docker exec -it --user root airflow-airflow-worker-1 bash
