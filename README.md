@@ -14,7 +14,7 @@
   > mkdir crawler_bitdefender -->將程式拖拉進路徑(本次使用DAG + .ENV)<br>
   > ![image](https://github.com/user-attachments/assets/bce913fb-b259-41ee-99bd-0c687d74f3cd)
 
-# 1.進入容器(root權限安裝)
+# 1.root權限安裝進入容器(都要安裝套件)
 docker exec -it --user root airflow-airflow-webserver-1 bash<br>
 docker exec -it --user root airflow-airflow-triggerer-1 bash<br>
 docker exec -it --user root airflow-airflow-scheduler-1 bash<br>
