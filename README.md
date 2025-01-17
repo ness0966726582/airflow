@@ -15,7 +15,7 @@
   > ![image](https://github.com/user-attachments/assets/bce913fb-b259-41ee-99bd-0c687d74f3cd)
 
 # 1.進入容器(root權限安裝)
-docker exec -it --user root airflow-airflow-triggerer-1 bash
+docker exec -it --user root airflow-airflow-triggerer-1 bash<br>
 docker exec -it --user root airflow-airflow-triggerer-1 bash<br>
 docker exec -it --user root airflow-airflow-scheduler-1 bash<br>
 docker exec -it --user root airflow-airflow-worker-1 bash
