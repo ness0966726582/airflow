@@ -16,14 +16,23 @@
 - 進入容器使用Airflow最高權限安裝程式必要的API
   1.查看容器狀態 docker ps<br>
   > ![image](https://github.com/user-attachments/assets/db9cc888-0655-4629-a658-0d65dc7722ec)<br>
-  > docker exec -it --user airflow airflow-airflow-webserver-1 bash<br>
-  > docker exec -it --user airflow airflow-airflow-triggerer-1 bash<br>
-  > docker exec -it --user airflow airflow-airflow-scheduler-1 bash<br>
-  > docker exec -it --user airflow airflow-airflow-worker-1 bash<br>
+  
+  # <進入容器>------>docker exec -it --user root <container-id> /bin/bash
+  > docker exec -it --user root airflow-airflow-webserver-1 bash<br>
+  > cd /opt/airflow/dags//crawler_bitdefender/<br>
+  > python3 install_chrome.py<br>
+  > 確認完成安裝版本
+  > google-chrome --version<br>
+  > chromedriver --version<br>
+  > 離開容器 exit
+
+  > docker exec -it --user root airflow-airflow-triggerer-1 bash
+  > docker exec -it --user root airflow-airflow-scheduler-1 bash
+  > docker exec -it --user root airflow-airflow-worker-1 bash
 
   2.個別進入容器內安裝必要API(本次使用爬蟲會需要多瀏覽器)
   > docker exec -it --user airflow airflow-airflow-webserver-1 bash<br>
-  > cd /opt/airflow/dags<br>
+  > cd /opt/airflow/dags//crawler_bitdefender/<br>
   > python -m pip install --upgrade pip<br>
   > python -m pip --version<br>
   
