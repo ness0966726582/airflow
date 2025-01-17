@@ -4,7 +4,7 @@
   2.最高權限 sudo su<br> 
   3.密碼:sakura#123<br>
 ![image](https://github.com/user-attachments/assets/f6b509a7-6603-4c63-9650-1bb43c22e43d)<br>
-- 查看容器狀態
+- 查看容器狀態<br>
   > docker ps<br>
   > ![image](https://github.com/user-attachments/assets/db9cc888-0655-4629-a658-0d65dc7722ec)<br>
   
@@ -14,16 +14,16 @@
   > mkdir crawler_bitdefender -->將程式拖拉進路徑(本次使用DAG + .ENV)<br>
   > ![image](https://github.com/user-attachments/assets/bce913fb-b259-41ee-99bd-0c687d74f3cd)
 
-# 1.root權限安裝進入容器(都要安裝套件)
-docker exec -it --user root airflow-airflow-webserver-1 bash<br>
+# 1.root權限安裝進入容器(都要安裝套件)<br>
+> docker exec -it --user root airflow-airflow-webserver-1 bash<br>
 docker exec -it --user root airflow-airflow-triggerer-1 bash<br>
 docker exec -it --user root airflow-airflow-scheduler-1 bash<br>
 docker exec -it --user root airflow-airflow-worker-1 bash
 
-# 2.專案存放路徑
-cd /opt/airflow/dags/crawler_bitdefender
+# 2.專案存放路徑<br>
+> cd /opt/airflow/dags/crawler_bitdefender
 
-# 3.權限這個方式略過python -m pip install + 要安裝套件
+# 3.權限這個方式略過python -m pip install + 要安裝套件<br>
   > pip3 install selenium<br>
     pip3 install psycopg2-binary<br>
     pip3 install python-dotenv<br>
@@ -32,16 +32,16 @@ cd /opt/airflow/dags/crawler_bitdefender
   python3 -c "import psycopg2; print(psycopg2.__version__)"<br>
   python3 -c "from dotenv import load_dotenv; print('dotenv is working')"<br>
 
-# 4.爬蟲必要安裝(選用版本號: 114.0.5735.90)
-[來源google-chrome](https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/)
-[來源chromedriver](https://chromedriver.storage.googleapis.com/)
-作法:個別進入容器內下
-> 安裝套件
+# 4.爬蟲必要安裝(選用版本號: 114.0.5735.90)<br>
+[來源google-chrome](https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/)<br>
+[來源chromedriver](https://chromedriver.storage.googleapis.com/)<br>
+作法:個別進入容器內下<br>
+> 安裝套件<br>
     apt-get update && apt-get install -y \     wget \    unzip \    fonts-liberation \    libvulkan1 \    libxrandr2 \    libatk1.0-0 \    libxdamage1 \    libxcomposite1 \    libasound2 \    libgtk-3-0 \
     libpangocairo-1.0-0 \    libnss3 \    libx11-xcb1 \    xdg-utils && \    apt-get clean
 
 > 安裝google-chrome<br>
-wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable//google-chrome-stable_114.0.5735.90-1_amd64.deb && \
+wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.90-1_amd64.deb && \
 dpkg -i google-chrome-stable_114.0.5735.90-1_amd64.deb || apt-get -f install -y
 
 > 安裝chromedriver<br>
@@ -53,11 +53,12 @@ chmod +x /usr/local/bin/chromedriver
 > 檢查安裝版本一致<br>
 google-chrome --version && chromedriver --version<br>
   
-> 離開容器 exit
+> 離開容器<br>
+> exit<br>
 PS.所有容器皆需要安裝
 
-# 5.重啟容器
-  docker restart airflow-airflow-webserver-1<br>
+# 5.重啟容器<br>
+> docker restart airflow-airflow-webserver-1<br>
   docker restart airflow-airflow-triggerer-1<br>
   docker restart airflow-airflow-scheduler-1<br>
   docker restart airflow-airflow-worker-1<br>
