@@ -27,7 +27,7 @@ cd /opt/airflow/dags/crawler_bitdefender
   > pip3 install selenium<br>
     pip3 install psycopg2-binary<br>
     pip3 install python-dotenv<br>
-  檢查
+  檢查<br>
   python3 -c "import selenium; print(selenium.__version__)"<br>
   python3 -c "import psycopg2; print(psycopg2.__version__)"<br>
   python3 -c "from dotenv import load_dotenv; print('dotenv is working')"<br>
