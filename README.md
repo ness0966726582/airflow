@@ -20,14 +20,14 @@ docker exec -it --user root airflow-airflow-triggerer-1 bash<br>
 docker exec -it --user root airflow-airflow-scheduler-1 bash<br>
 docker exec -it --user root airflow-airflow-worker-1 bash
 
-# 2.專案存放路徑<br>
+# 2.進入專案存放路徑<br>
 > cd /opt/airflow/dags/crawler_bitdefender
 
-# 3.權限這個方式略過python -m pip install + 要安裝套件<br>
+# 3.pip install 安裝套件(過程可能會有失效的工具可以刪除)<br>
   > pip3 install selenium<br>
     pip3 install psycopg2-binary<br>
     pip3 install python-dotenv<br>
-  檢查<br>
+  > 檢查<br>
   python3 -c "import selenium; print(selenium.__version__)"<br>
   python3 -c "import psycopg2; print(psycopg2.__version__)"<br>
   python3 -c "from dotenv import load_dotenv; print('dotenv is working')"<br>
