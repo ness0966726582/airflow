@@ -21,7 +21,7 @@
   > docker exec -it --user root airflow-airflow-webserver-1 bash<br>
   > cd /opt/airflow/dags//crawler_bitdefender/<br>
   > python3 install_chrome.py<br>
-  > 確認完成安裝版本
+  > 確認完成安裝版本<br>
   > google-chrome --version<br>
   > chromedriver --version<br>
   > 離開容器 exit
