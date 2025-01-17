@@ -37,8 +37,7 @@ cd /opt/airflow/dags/crawler_bitdefender
 [來源chromedriver](https://chromedriver.storage.googleapis.com/)
 作法:個別進入容器內下
 > 安裝套件
-    apt-get update && apt-get install -y \ 
-    wget \
+    apt-get update && apt-get install -y \     wget \
     unzip \
     fonts-liberation \
     libvulkan1 \
