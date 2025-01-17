@@ -19,7 +19,7 @@
   
   # <進入容器>------>docker exec -it --user root <container-id> /bin/bash
   > docker exec -it --user root airflow-airflow-webserver-1 bash<br>
-  > cd /opt/airflow/dags//crawler_bitdefender/<br>
+  > cd /opt/airflow/dags/crawler_bitdefender/<br>
   
   > apt-get update && apt-get install -y \
     wget \
@@ -47,8 +47,8 @@
     chmod +x /usr/local/bin/chromedriver 
 
   > 確認完成安裝版本<br>
-  > google-chrome --version<br>
-  > chromedriver --version<br>
+  > google-chrome --version && chromedriver --version<br>
+  
   > 離開容器 exit
   ![image](https://github.com/user-attachments/assets/fc7b34d6-111a-41ce-a2f4-c9175aa6fe33)
   
@@ -57,6 +57,9 @@
   > ![image](https://github.com/user-attachments/assets/9c1e4d09-88b7-4cdc-b640-c178bd4438d6)
 
   > docker exec -it --user root airflow-airflow-scheduler-1 bash
+  > 同上作法
+  > ![image](https://github.com/user-attachments/assets/0387e5f1-79f4-49f8-92ba-5fd64da37f94)
+
   > docker exec -it --user root airflow-airflow-worker-1 bash
 
   2.個別進入容器內安裝必要API(本次使用爬蟲會需要多瀏覽器)
