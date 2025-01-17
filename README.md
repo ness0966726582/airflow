@@ -30,7 +30,7 @@ docker exec -it --user root airflow-airflow-worker-1 bash
   > pip3 install selenium<br>
     pip3 install psycopg2-binary<br>
     pip3 install python-dotenv<br>
-  > 檢查<br>
+  檢查<br>
   python3 -c "import selenium; print(selenium.__version__)"<br>
   python3 -c "import psycopg2; print(psycopg2.__version__)"<br>
   python3 -c "from dotenv import load_dotenv; print('dotenv is working')"<br>
@@ -39,24 +39,24 @@ docker exec -it --user root airflow-airflow-worker-1 bash
 [來源google-chrome](https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/)<br>
 [來源chromedriver](https://chromedriver.storage.googleapis.com/)<br>
 作法:個別進入容器內下<br>
-> 安裝套件<br>
+4-1.安裝套件<br>
     apt-get update && apt-get install -y \     wget \    unzip \    fonts-liberation \    libvulkan1 \    libxrandr2 \    libatk1.0-0 \    libxdamage1 \    libxcomposite1 \    libasound2 \    libgtk-3-0 \
     libpangocairo-1.0-0 \    libnss3 \    libx11-xcb1 \    xdg-utils && \    apt-get clean
 
-> 安裝google-chrome<br>
+4-2.安裝google-chrome<br>
 wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.90-1_amd64.deb && \
 dpkg -i google-chrome-stable_114.0.5735.90-1_amd64.deb || apt-get -f install -y
 
-> 安裝chromedriver<br>
+4-3.安裝chromedriver<br>
 wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip && \
 unzip chromedriver_linux64.zip && \
 mv chromedriver /usr/local/bin/ && \
 chmod +x /usr/local/bin/chromedriver 
 
-> 檢查安裝版本一致<br>
+4-4.檢查安裝版本一致<br>
 google-chrome --version && chromedriver --version<br>
   
-> 離開容器<br>
+4-5.離開容器<br>
 > exit<br>
 PS.所有容器皆需要安裝
 
