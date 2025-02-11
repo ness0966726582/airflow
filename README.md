@@ -2,6 +2,9 @@
 ![image](https://github.com/user-attachments/assets/09c4b08b-6683-4bb9-97d2-c337b3897942)
 
 # Airflow
+- [測試區](http://10.231.220.68:8080/home)
+- [正式區](http://10.231.250.68:8080/home)
+
 - XSHELL操作<br>
   1.登入Airflow主機10.231.220.68(ness/ness)<br>
   2.最高權限 sudo su<br> 
