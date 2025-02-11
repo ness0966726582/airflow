@@ -3,9 +3,9 @@
 
 # Airflow
 - XSHELL操作<br>
-  1.登入Airflow主機10.231.220.68(ness/ness#123)<br>
+  1.登入Airflow主機10.231.220.68(ness/ness)<br>
   2.最高權限 sudo su<br> 
-  3.密碼:ness#123<br>
+  3.密碼:ness<br>
 ![image](https://github.com/user-attachments/assets/f6b509a7-6603-4c63-9650-1bb43c22e43d)<br>
 - 查看容器狀態<br>
   > docker ps<br>
